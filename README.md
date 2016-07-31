@@ -1,4 +1,4 @@
-MBTA-GTFS
+PostgreSQL GTFS Schema
 ==========
 PostgreSQL schema for the MBTA and MTA GTFS feeds.
 
