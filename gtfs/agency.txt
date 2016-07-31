@@ -1,6 +1,0 @@
-agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone
-MB,Metrobús,http://www.metrobus.df.gob.mx/,America/Mexico_City,,
-METRO,Sistema de Transporte Colectivo-Metro,http://www.metro.df.gob.mx/,America/Mexico_City,,
-RTP,Red de Transporte de Pasajeros,http://www.rtp.gob.mx/,America/Mexico_City,,
-STE,Servicio de Transportes Eléctricos,http://www.ste.df.gob.mx/,America/Mexico_City,,
-SUB,Ferrocarriles Suburbanos,http://www.fsuburbanos.com/,America/Mexico_City,,
