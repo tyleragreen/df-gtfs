@@ -1,4 +1,4 @@
-NOTE: RTD (Denver) and RATP (Paris) are not yet complete.
+NOTE: RTD (Denver) is not yet complete.
 
 # PostgreSQL GTFS Schema
 PostgreSQL schema for GTFS feeds from across the world.
