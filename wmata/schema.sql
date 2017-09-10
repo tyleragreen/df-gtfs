@@ -73,10 +73,9 @@ CREATE TABLE stop_times
   departure_time    interval NOT NULL,
   stop_id           text NOT NULL,
   stop_sequence     integer NOT NULL,
-  stop_headsign     text NULL,
   pickup_type       integer NULL CHECK(pickup_type >= 0 and pickup_type <=3),
   drop_off_type     integer NULL CHECK(drop_off_type >= 0 and drop_off_type <=3),
-  shape_dist_traveled integer NULL
+  shape_dist_traveled double precision NULL
 );
 
 \copy agency from './gtfs/agency.txt' with csv header

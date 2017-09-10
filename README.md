@@ -1,13 +1,40 @@
-NOTE: RTD (Denver) is not yet complete.
-
 # PostgreSQL GTFS Schema
+
 PostgreSQL schema for GTFS feeds from across the world.
 
-Current GTFS feeds can be found at www.transitfeeds.com.
+The best resource for up-to-date GTFS feeds is [TransitFeeds](www.transitfeeds.com).
 
-## Future Work
+## Nothing Overwhelming Here
 
-The GTFS schemas are currently maintained separately per agency due to the presence of optional fields and files. Each agency uses these optional items slightly differently. A future enhancement may be a pre-processing script which produces a schema.sql file for a given GTFS feed based on the presence (or absence) of optional fields and files. 
+The differences between the various agencies `schema.sql` files is based on the different optional fields and file in an agency's feed. The columns in a table should match with the header row of a GTFS file.
+
+A potential future enhancement is a pre-processing script which builds a `schema.sql` file for a given GTFS feed based on the presence of optional fields and files. 
+
+## Usage
+
+Use the following template command to load a GTFS feed into a Postgres database:
+```
+psql --host=<db_host> --port=<port> --username=<db_username> --dbname=<dbname> --file=schema.sql --password
+```
+You will be prompted to enter the password for the provided db user and then the `schema.sql` script will begin executing on the host. Depending on the size of the `stop_times.txt` file (some are a few million rows), the process may take up to 30 minutes.
+
+The output should look like:
+```
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+```
 
 ## Contribute
 
