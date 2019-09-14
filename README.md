@@ -8,7 +8,7 @@ The best resource for up-to-date GTFS feeds is [TransitFeeds](www.transitfeeds.c
 
 The differences between the various agencies `schema.sql` files is based on the different optional fields and file in an agency's feed. The columns in a table should match with the header row of a GTFS file.
 
-A potential future enhancement is a pre-processing script which builds a `schema.sql` file for a given GTFS feed based on the presence of optional fields and files. 
+There is also a pre-processing script which builds a `schema.sql` file for a given GTFS feed based on the presence of optional fields and files. 
 
 ## Usage
 
@@ -34,6 +34,20 @@ CREATE TABLE
 CREATE TABLE
 CREATE TABLE
 CREATE TABLE
+```
+
+## Generating a schema
+
+You can also generate a schema based on an existing GTFS file. The script requires Bash version 4.0 or newer to run. Unzip the GTFS zip file into a working directory. Then run:
+
+```bash
+./gtfs_schema.sh gtfs-directory > schema.sql
+```
+
+Then run the `psql` command above. You could also combine both commands into one:
+
+```bash
+./gtfs-schema.sh gtfs-directory | psql --host=<db_host> --port=<port> --username=<db_username> --dbname=<dbname> --password
 ```
 
 ## Contribute
