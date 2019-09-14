@@ -38,7 +38,7 @@ CREATE TABLE
 
 ## Generating a schema
 
-You can also generate a schema based on an existing GTFS file. Unzip the GTFS zip file into a working directory. Then run:
+You can also generate a schema based on an existing GTFS file. The script requires Bash version 4.0 or newer to run. Unzip the GTFS zip file into a working directory. Then run:
 
 ```bash
 ./gtfs_schema.sh gtfs-directory > schema.sql
